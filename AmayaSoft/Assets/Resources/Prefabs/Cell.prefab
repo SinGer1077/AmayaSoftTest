@@ -4851,6 +4851,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7106717197630280771}
+  - component: {fileID: 1369083845160828173}
+  - component: {fileID: 4434766074307241013}
   - component: {fileID: 3453085704532679671}
   - component: {fileID: 7835163886614947980}
   m_Layer: 5
@@ -4877,6 +4879,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1369083845160828173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106717197630280780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2813e28c7084b741af5bef55257b945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4434766074307241013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7106717197630280780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 450f03995e6f1074280091b4fff71fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3453085704532679671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4889,10 +4915,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c842656a46d4f4a8bed250a3f7f39f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameController: {fileID: 0}
-  this_value: 
   childImage: {fileID: 2501760754157450184}
   starEffect: {fileID: 5879471827700513256}
+  this_card:
+    _identifier: 
+    _sprite: {fileID: 0}
 --- !u!114 &7835163886614947980
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -12,3 +12,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a86e4d5a935ac9244a88d15918b74eab, type: 3}
   m_Name: Letters
   m_EditorClassIdentifier: 
+  _cardDataArray:
+  - _identifier: A
+    _sprite: {fileID: 21300000, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: B
+    _sprite: {fileID: 21300002, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: C
+    _sprite: {fileID: 21300004, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: D
+    _sprite: {fileID: 21300006, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: E
+    _sprite: {fileID: 21300016, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: F
+    _sprite: {fileID: 21300008, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: G
+    _sprite: {fileID: 21300010, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: H
+    _sprite: {fileID: 21300018, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: I
+    _sprite: {fileID: 21300014, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: J
+    _sprite: {fileID: 21300012, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: K
+    _sprite: {fileID: 21300020, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: L
+    _sprite: {fileID: 21300022, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: M
+    _sprite: {fileID: 21300024, guid: efc7a1d580b42904783ee8f4aad942da, type: 3}
+  - _identifier: N
+    _sprite: {fileID: 21300016, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: O
+    _sprite: {fileID: 21300008, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: P
+    _sprite: {fileID: 21300018, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: Q
+    _sprite: {fileID: 21300010, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: R
+    _sprite: {fileID: 21300000, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: S
+    _sprite: {fileID: 21300002, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: T
+    _sprite: {fileID: 21300014, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: U
+    _sprite: {fileID: 21300004, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: V
+    _sprite: {fileID: 21300006, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: W
+    _sprite: {fileID: 21300012, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: X
+    _sprite: {fileID: 21300022, guid: 4d6758c687fcab14caa4003db93bee56, type: 3}
+  - _identifier: Y
+    _sprite: {fileID: 21300000, guid: ba2077b050c72f04d936caad67ad8eed, type: 3}
+  - _identifier: Z
+    _sprite: {fileID: 21300002, guid: ba2077b050c72f04d936caad67ad8eed, type: 3}

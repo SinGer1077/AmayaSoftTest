@@ -5,18 +5,19 @@ using DG.Tweening;
 
 public class CellClick : MonoBehaviour
 {
-    public GameObject gameController;
-    public string this_value;
-    public GameObject childImage;
-    public ParticleSystem starEffect;
-    void Awake()
+    private GameObject gameController;    
+    [SerializeField] private GameObject childImage;
+    [SerializeField] private ParticleSystem starEffect;    
+    private Level Current_Level;
+    void Start()
     {
         gameController = GameObject.Find("GameController");
+        Current_Level = gameController.GetComponent<GameStart>().Current_Level;        
         starEffect.gameObject.SetActive(false);
     }
     public void Click()
     {
-        if (this_value == gameController.GetComponent<LevelStart>().level_target)
+        if (GetComponent<CellData>().Cell_Data.Identifier == Current_Level.Level_target.Identifier)
         {
             Win();
         }

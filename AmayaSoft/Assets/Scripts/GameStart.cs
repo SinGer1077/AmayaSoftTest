@@ -53,6 +53,7 @@ public class GameStart : MonoBehaviour
     public void RestartGame()
     {
         Current_Level_Number = 0;
+        previousCards = new List<CardData>();
         StartLevel();
     }
 }

@@ -8,9 +8,11 @@ public class CellClick : MonoBehaviour
     public GameObject gameController;
     public string this_value;
     public GameObject childImage;
+    public ParticleSystem starEffect;
     void Awake()
     {
         gameController = GameObject.Find("GameController");
+        starEffect.gameObject.SetActive(false);
     }
     public void Click()
     {
@@ -25,7 +27,8 @@ public class CellClick : MonoBehaviour
     }
     public void Win()
     {
-        
+        childImage.transform.DOShakeScale(2.0f, strength: new Vector3(1, 1, 1), vibrato: 2, randomness: 1, fadeOut: true);
+        starEffect.gameObject.SetActive(true);
     }
     public void Lose()
     {

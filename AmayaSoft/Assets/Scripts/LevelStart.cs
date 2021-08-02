@@ -11,7 +11,11 @@ public class LevelStart : MonoBehaviour
     public int cells_count;
     public LevelData levelData;
 
-    public List<string> session_values; 
+    public List<string> session_values;
+
+    //нормальная версия
+    private Queue<Level> _game_levels;
+    private Level _current_level;
 
     void Awake()
     {
@@ -26,7 +30,19 @@ public class LevelStart : MonoBehaviour
         }
         
         level_target = session_values[Random.Range(0, session_values.Count)];      
-        level_target_message.SetText("Find "+level_target);      
+        level_target_message.SetText("Find "+level_target);
+        //
+        _game_levels.Enqueue(new Level(3, LevelDifficulty.Low));
+        _game_levels.Enqueue(new Level(6, LevelDifficulty.Medium));
+        _game_levels.Enqueue(new Level(9, LevelDifficulty.High));
+    }
+    void Start()
+    {
+        _current_level = _game_levels.Dequeue();
+        StartLevel(_current_level);
+    }
+    void StartLevel(Level _current_level)
+    {
 
     }
 }

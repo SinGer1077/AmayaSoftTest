@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class LevelStart : MonoBehaviour
-{
-    public TextMeshProUGUI level_target_message;
+public class GameStart : MonoBehaviour
+{    
     public string level_target;
     public int cells_count;
     public LevelData levelData;
@@ -16,22 +15,12 @@ public class LevelStart : MonoBehaviour
     //нормальная версия
     private Queue<Level> _game_levels;
     private Level _current_level;
+    [SerializeField] private CardBundleData[] card_types;
+    [SerializeField] private TextMeshProUGUI level_target_message;
+
 
     void Awake()
-    {
-        cells_count = 6;
-        while (session_values.Count < cells_count)
-        {
-            string value = levelData.vocabulary[Random.Range(0, levelData.vocabulary.Length)];
-            if (!session_values.Contains(value))
-            {
-                session_values.Add(value);
-            }
-        }
-        
-        level_target = session_values[Random.Range(0, session_values.Count)];      
-        level_target_message.SetText("Find "+level_target);
-        //
+    {       
         _game_levels.Enqueue(new Level(3, LevelDifficulty.Low));
         _game_levels.Enqueue(new Level(6, LevelDifficulty.Medium));
         _game_levels.Enqueue(new Level(9, LevelDifficulty.High));
@@ -43,6 +32,7 @@ public class LevelStart : MonoBehaviour
     }
     void StartLevel(Level _current_level)
     {
-
+        _current_level.Start(card_types);
+        level_target_message.SetText("Find " + _current_level.Level_target.Identifier);
     }
 }

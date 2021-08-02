@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class Level
 {
     //количество ячеек на уровне
@@ -32,7 +33,7 @@ public class Level
     }
 
     //тип данных на уровне
-    [SerializeField] private CardBundleData _type_of_card;
+    private CardBundleData _type_of_card;
     public CardBundleData Card_Type
     {
         get { return _type_of_card; }
@@ -40,7 +41,7 @@ public class Level
     }
 
     //данные, которые будут задействованы в уровне
-    [SerializeField] private List<CardData> _session_values;
+    private List<CardData> _session_values;
     public List<CardData> Session_values
     {
         get { return _session_values; }
@@ -48,7 +49,7 @@ public class Level
     }
 
     //цель текущего уровня
-    [SerializeField] private CardData _session_target;
+    private CardData _session_target;
     public CardData Level_target
     {
         get { return _session_target; }

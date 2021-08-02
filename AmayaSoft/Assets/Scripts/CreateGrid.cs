@@ -9,19 +9,23 @@ public class CreateGrid : MonoBehaviour
     [SerializeField] private GameObject prefab;
     [SerializeField] private GameObject gameController;         
     private Level Current_Level;
-
-    private void Start()
+   
+    public void PopulateGrid()
     {
-        Current_Level = gameController.GetComponent<GameStart>().Current_Level;        
-        PopulateGrid();
-    }
-    void PopulateGrid()
-    {
+        ClearGrid();
+        Current_Level = gameController.GetComponent<GameStart>().Current_Level;
         GameObject newObj;
         for (int i=0; i < Current_Level.Values_on_level_count; i++)
         {
             newObj = (GameObject)Instantiate(FormPrefab(i), transform);
             newObj.AddComponent<LayoutElement>();            
+        }
+    }
+    void ClearGrid()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
         }
     }
     GameObject FormPrefab(int index)

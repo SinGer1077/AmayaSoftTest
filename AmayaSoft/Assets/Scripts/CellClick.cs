@@ -30,6 +30,7 @@ public class CellClick : MonoBehaviour
     {
         childImage.transform.DOShakeScale(2.0f, strength: new Vector3(1, 1, 1), vibrato: 2, randomness: 1, fadeOut: true);
         starEffect.gameObject.SetActive(true);
+        gameController.GetComponent<GameStart>().EndLevel();
     }
     public void Lose()
     {

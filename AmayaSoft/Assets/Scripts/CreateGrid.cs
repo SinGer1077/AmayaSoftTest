@@ -37,6 +37,9 @@ public class CreateGrid : MonoBehaviour
         imageOfPrefab.GetComponent<Image>().sprite = Current_Level.Session_values[index].CardSprite;
 
         prefab.GetComponent<CellData>().Cell_Data = Current_Level.Session_values[index];
+
+        
+
         return prefab;
     }
 }

@@ -8,6 +8,7 @@ public class GameStart : MonoBehaviour
     [SerializeField] private List<Level> _game_levels_list;
     private int Current_Level_Number = 0;    
     private Level _current_level;
+    private List<CardData> previousCards = new List<CardData>();
     public Level Current_Level => _current_level;
     [SerializeField] private CardBundleData[] card_types;
     [SerializeField] private Text level_target_message;
@@ -26,8 +27,10 @@ public class GameStart : MonoBehaviour
         tapPanel.SetActive(false);
 
         _current_level = _game_levels_list[Current_Level_Number];
-        _current_level.Start(card_types);
+        _current_level.Start(card_types, previousCards);
         level_target_message.text = "Find " + _current_level.Level_target.Identifier;
+        previousCards.Add(_current_level.Level_target);
+
         grid.GetComponent<CreateGrid>().PopulateGrid();
     }
     public void EndLevel()

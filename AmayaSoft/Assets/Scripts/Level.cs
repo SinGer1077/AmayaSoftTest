@@ -61,23 +61,23 @@ public class Level
         Values_on_level_count = variants_count;
         Difficulty_of_level = difficulty;
     }
-    public void Start(CardBundleData[] _card_data_types)
+    public void Start(CardBundleData[] _card_data_types, List<CardData> previousCards)
     {
         SetRandomCardType(_card_data_types);
-        SetRandomCardsOnLevel();
+        SetRandomCardsOnLevel(previousCards);
         ChooseRandomTarget();
     }
     void SetRandomCardType(CardBundleData[] _card_data_types)
     {
         Card_Type = _card_data_types[UnityEngine.Random.Range(0, _card_data_types.Length)];
     }
-    void SetRandomCardsOnLevel()
+    void SetRandomCardsOnLevel(List<CardData> previousCards)
     {
         Session_values = new List<CardData>();
         while (Session_values.Count < Values_on_level_count)
         {
             CardData value = Card_Type.CardDataArray[UnityEngine.Random.Range(0, Card_Type.CardDataArray.Length)];
-            if (!Session_values.Contains(value))
+            if (!Session_values.Contains(value) && !previousCards.Contains(value))
             {
                 Session_values.Add(value);
             }

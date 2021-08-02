@@ -51,7 +51,7 @@ SpriteAtlas:
     - {fileID: 21300000, guid: 75da4aa7700e1f9478d84f5a2ff388fb, type: 3}
     - {fileID: 21300000, guid: 955c3ac101d241b47a764090bff8828f, type: 3}
     - {fileID: 21300000, guid: deb2bee053c020f45a257e8876ee117f, type: 3}
-    totalSpriteSurfaceArea: 1369045
+    totalSpriteSurfaceArea: 1149974
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -66,8 +66,8 @@ SpriteAtlas:
   - {fileID: 21300004, guid: 9e7b37f95ab607b4abfa3e1b5d486371, type: 3}
   - {fileID: 21300000, guid: 9e7b37f95ab607b4abfa3e1b5d486371, type: 3}
   m_PackedSpriteNamesToIndex:
-  - sprite_numbers_10
-  - sprite_numbers_9
+  - sprite_numbers_10_0
+  - sprite_numbers_9_0
   - sprite_numbers_8
   - sprite_numbers_7
   - sprite_numbers_6

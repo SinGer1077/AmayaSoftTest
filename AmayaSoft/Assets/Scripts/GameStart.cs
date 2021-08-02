@@ -23,15 +23,12 @@ public class GameStart : MonoBehaviour
     }
     void StartLevel()
     {
-        restartButton.gameObject.SetActive(false);
-        tapPanel.SetActive(false);
-
         _current_level = _game_levels_list[Current_Level_Number];
         _current_level.Start(card_types, previousCards);
         level_target_message.text = "Find " + _current_level.Level_target.Identifier;
         previousCards.Add(_current_level.Level_target);
 
-        grid.GetComponent<CreateGrid>().PopulateGrid();
+        grid.GetComponent<CreateGrid>().PopulateGrid(Current_Level_Number);
     }
     public void EndLevel()
     {
@@ -54,6 +51,10 @@ public class GameStart : MonoBehaviour
     {
         Current_Level_Number = 0;
         previousCards = new List<CardData>();
+
+        restartButton.gameObject.SetActive(false);
+        tapPanel.SetActive(false);
+
         StartLevel();
     }
 }

@@ -10,14 +10,14 @@ public class CreateGrid : MonoBehaviour
     [SerializeField] private GameObject gameController;         
     private Level Current_Level;
    
-    public void PopulateGrid()
+    public void PopulateGrid(int level_number)
     {
         ClearGrid();
         Current_Level = gameController.GetComponent<GameStart>().Current_Level;
         GameObject newObj;
         for (int i=0; i < Current_Level.Values_on_level_count; i++)
         {
-            newObj = (GameObject)Instantiate(FormPrefab(i), transform);
+            newObj = (GameObject)Instantiate(FormPrefab(i, level_number), transform);
             newObj.AddComponent<LayoutElement>();            
         }
     }
@@ -28,7 +28,7 @@ public class CreateGrid : MonoBehaviour
             Destroy(transform.GetChild(i).gameObject);
         }
     }
-    GameObject FormPrefab(int index)
+    GameObject FormPrefab(int index, int level_number)
     {
         Transform backgroundOfPrefab = prefab.transform.Find("CellBackground");
         backgroundOfPrefab.GetComponent<Image>().color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
@@ -38,7 +38,14 @@ public class CreateGrid : MonoBehaviour
 
         prefab.GetComponent<CellData>().Cell_Data = Current_Level.Session_values[index];
 
-        
+        if (level_number > 0)
+        {
+            prefab.GetComponent<Bounce>().enabled = false;
+        }
+        else
+        {
+            prefab.GetComponent<Bounce>().enabled = true;
+        }
 
         return prefab;
     }

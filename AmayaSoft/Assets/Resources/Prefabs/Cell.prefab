@@ -63,7 +63,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 955c3ac101d241b47a764090bff8828f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: deb2bee053c020f45a257e8876ee117f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4828,7 +4828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.7254902}
+  m_Color: {r: 0.4849355, g: 0.85163546, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4886,7 +4886,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7106717197630280780}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2813e28c7084b741af5bef55257b945, type: 3}
   m_Name: 
@@ -4903,6 +4903,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 450f03995e6f1074280091b4fff71fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cardData:
+    _identifier: 10
+    _sprite: {fileID: 21300000, guid: deb2bee053c020f45a257e8876ee117f, type: 3}
 --- !u!114 &3453085704532679671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4917,9 +4920,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   childImage: {fileID: 2501760754157450184}
   starEffect: {fileID: 5879471827700513256}
-  this_card:
-    _identifier: 
-    _sprite: {fileID: 0}
 --- !u!114 &7835163886614947980
 MonoBehaviour:
   m_ObjectHideFlags: 0
